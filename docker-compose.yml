@@ -91,6 +91,8 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASS:-zammad}
     image: postgres:${POSTGRES_VERSION:-15.8-alpine}
     restart: ${RESTART:-always}
+    ports:
+      - "$5417:5432"
     volumes:
       - postgresql-data:/var/lib/postgresql/data
 
