@@ -92,7 +92,7 @@ services:
     image: postgres:${POSTGRES_VERSION:-15.8-alpine}
     restart: ${RESTART:-always}
     ports:
-      - "$5417:5432"
+      - "5417:5432"
     volumes:
       - postgresql-data:/var/lib/postgresql/data
 
